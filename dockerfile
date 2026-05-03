@@ -1,5 +1,5 @@
-FROM openjdk:17-slim
+FROM openjdk:17
 WORKDIR /app
-COPY target/welcome-service.jar app.jar
+COPY ./target/welcome-service.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "welcome-service.jar"]
